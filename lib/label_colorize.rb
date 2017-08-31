@@ -1,5 +1,8 @@
 require 'label_colorize/version'
+require 'label_colorize/generator'
 
 module LabelColorize
-  # Your code goes here...
+  def self.generate_color(str)
+    Generator.new(str).color
+  end
 end
