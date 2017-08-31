@@ -1,0 +1,59 @@
+AllCops:
+  Include:
+  - "**/*.rake"
+  - "**/Gemfile"
+  - "**/Rakefile"
+  Exclude:
+  - "spec/spec_helper.rb"
+  DisplayCopNames: false
+  StyleGuideCopsOnly: false
+
+Layout/AlignParameters:
+  EnforcedStyle: with_fixed_indentation
+
+Naming/PredicateName:
+  NamePrefixBlacklist:
+    - 'is_'
+
+Style/AlignHash:
+  EnforcedHashRocketStyle: table
+  EnforcedColonStyle: table
+Style/BracesAroundHashParameters:
+  Enabled: false
+Style/ClassAndModuleChildren:
+  Enabled: false
+Style/DoubleNegation:
+  Enabled: false
+Style/FormatString:
+  Enabled: false
+Style/IndentArray:
+  EnforcedStyle: consistent
+Style/IndentHash:
+  EnforcedStyle: consistent
+Style/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+Style/RedundantReturn:
+  Enabled: false
+Style/SpaceBeforeBlockBraces:
+  Enabled: false
+Style/TrailingCommaInArguments:
+  Enabled: false
+Style/TrailingCommaInLiteral:
+  Enabled: false
+Style/VariableNumber:
+  Enabled: false
+
+Metrics/AbcSize:
+  Enabled: false
+Metrics/BlockLength:
+  Exclude:
+    - "spec/**/*"
+Metrics/ClassLength:
+  Max: 300
+Metrics/LineLength:
+  Enabled: false
+Metrics/MethodLength:
+  Max: 50
+
+Documentation:
+  Enabled: false
