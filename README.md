@@ -1,8 +1,6 @@
 # LabelColorize
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/label_colorize`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Generate color based on string. This helpful to generate colored labels.
 
 ## Installation
 
@@ -22,7 +20,24 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Require library
+```rb
+require 'label_colorize'
+```
+
+And get RGB HEX color:
+```rb
+LabelColorize.generate_rgb('Test string') # 0ef373
+```
+
+Or hue component:
+```rb
+LabelColorize.generate_hue('Test string') # 315
+```
+
+## TODO
+
+- Generate rgb color based on hue method but with provided saturation and lightness.
 
 ## Development
 
