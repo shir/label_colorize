@@ -2,10 +2,11 @@ require 'spec_helper'
 require 'securerandom'
 
 RSpec.describe LabelColorize::Generator do
-  describe '#color' do
-    subject{ LabelColorize::Generator.new(str).color }
+  describe '#rgb' do
+    subject{ generator.rgb }
 
-    let(:str) { SecureRandom.base64(10) }
+    let(:generator) { LabelColorize::Generator.new(str) }
+    let(:str)       { SecureRandom.base64(10) }
 
     it 'generate an RGB HEX color for given string' do
       expect(subject).to match(/\h{6}/)

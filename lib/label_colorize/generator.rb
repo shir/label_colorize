@@ -6,7 +6,7 @@ module LabelColorize
       @str = str
     end
 
-    def color
+    def rgb
       return nil unless str
 
       # Credits to Dominik Scholer
