@@ -11,5 +11,12 @@ RSpec.describe LabelColorize::Generator do
     it 'generate an RGB HEX color for given string' do
       expect(subject).to match(/\h{6}/)
     end
+
+    it 'generates same color for same string' do
+      generator1 = LabelColorize::Generator.new(str)
+      generator2 = LabelColorize::Generator.new(str)
+
+      expect(generator1.rgb).to eq generator2.rgb
+    end
   end
 end
